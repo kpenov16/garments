@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b51dfb61-fd0e-4a33-89c9-895af85c196d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1TgnllRKfRGbF04dQ5t0cDysgWB" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  </component>
+  <component name="ReplState" timestamp="1573911590811">{:repl-history {:ide [], :local [{:command &quot;(-main&quot;, :offset 6, :ns &quot;garments.core&quot;} {:command &quot;(+ 3 2)&quot;, :offset 7, :ns &quot;garments.core&quot;} {:command &quot;(+ 2 3)&quot;, :offset 6, :ns &quot;garments.core&quot;} {:command &quot;monitor-exit&quot;, :offset 12, :ns &quot;garments.core&quot;} {:command &quot;exit&quot;, :offset 0, :ns &quot;garments.core&quot;} {:command &quot;(exit)&quot;, :offset 5, :ns &quot;garments.core&quot;} {:command &quot;(-main)&quot;, :offset 6, :ns &quot;garments.core&quot;} {:command &quot;(-main \&quot;Pernille\n\&quot;)&quot;, :offset 17, :ns &quot;garments.core&quot;} {:command &quot;(-main \&quot;Pernille\&quot;)&quot;, :offset 16, :ns &quot;garments.core&quot;}], :remote []}}</component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Clojure REPL.repl">
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <module name="" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="0" />
+      <module name="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="repl" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <module name="garments" />
+      <setting name="replType" value="NREPL" />
+      <setting name="execution" value="LEININGEN" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="$PROJECT_DIR$" />
+      <setting name="profiles" value="" />
+      <setting name="aliases" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="garments.core" type="LeiningenRunConfiguration" factoryName="Leiningen">
+      <module name="garments" />
+      <arguments argument="run" />
+      <setting name="profiles" value="" />
+      <setting name="trampoline" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Clojure REPL.repl" />
+      <item itemvalue="Leiningen.garments.core" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b51dfb61-fd0e-4a33-89c9-895af85c196d" name="Default Changelist" comment="" />
+      <created>1573890758808</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573890758808</updated>
+    </task>
+    <servers />
+  </component>
+</project>
