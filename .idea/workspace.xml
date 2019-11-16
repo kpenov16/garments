@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b51dfb61-fd0e-4a33-89c9-895af85c196d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/garments/functions.clj" beforeDir="false" afterPath="$PROJECT_DIR$/src/garments/functions.clj" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,7 +22,7 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propCompiler" />
   </component>
-  <component name="ReplState" timestamp="1573916160955">{:repl-history {:ide [], :local [{:command &quot;(-main&quot;, :offset 6, :ns &quot;garments.core&quot;} {:command &quot;(+ 3 2)&quot;, :offset 7, :ns &quot;garments.core&quot;} {:command &quot;(+ 2 3)&quot;, :offset 6, :ns &quot;garments.core&quot;} {:command &quot;monitor-exit&quot;, :offset 12, :ns &quot;garments.core&quot;} {:command &quot;exit&quot;, :offset 0, :ns &quot;garments.core&quot;} {:command &quot;(exit)&quot;, :offset 5, :ns &quot;garments.core&quot;} {:command &quot;(-main)&quot;, :offset 6, :ns &quot;garments.core&quot;} {:command &quot;(-main \&quot;Pernille\n\&quot;)&quot;, :offset 17, :ns &quot;garments.core&quot;} {:command &quot;(-main \&quot;Pernille\&quot;)&quot;, :offset 16, :ns &quot;garments.core&quot;}], :remote []}}</component>
+  <component name="ReplState" timestamp="1573916573249">{:repl-history {:ide [], :local [{:command &quot;(-main&quot;, :offset 6, :ns &quot;garments.core&quot;} {:command &quot;(+ 3 2)&quot;, :offset 7, :ns &quot;garments.core&quot;} {:command &quot;(+ 2 3)&quot;, :offset 6, :ns &quot;garments.core&quot;} {:command &quot;monitor-exit&quot;, :offset 12, :ns &quot;garments.core&quot;} {:command &quot;exit&quot;, :offset 0, :ns &quot;garments.core&quot;} {:command &quot;(exit)&quot;, :offset 5, :ns &quot;garments.core&quot;} {:command &quot;(-main)&quot;, :offset 6, :ns &quot;garments.core&quot;} {:command &quot;(-main \&quot;Pernille\n\&quot;)&quot;, :offset 17, :ns &quot;garments.core&quot;} {:command &quot;(-main \&quot;Pernille\&quot;)&quot;, :offset 16, :ns &quot;garments.core&quot;}], :remote []}}</component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>

@@ -28,6 +28,9 @@
   (def g "hello")
   (def h 'thanks) ;;keyword as a reference
 
+  (def status true)
+  (def STATUS false)
+
   (println a)
   (println b)
   (println c)
@@ -36,6 +39,9 @@
   (println f)
   (println g)
   (println h)
+
+  (println status)
+  (println STATUS)
 
   )
 
