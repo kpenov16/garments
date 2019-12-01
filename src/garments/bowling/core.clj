@@ -4,4 +4,5 @@
 
 (defn score
   [rolls]
+  0
   )
