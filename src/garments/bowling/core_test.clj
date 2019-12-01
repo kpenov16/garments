@@ -8,6 +8,12 @@
          (group-frames [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]) ))
   )
 
+(deftest to-frame-scores-test
+  (testing "givenFrames_returnScores")
+  (is (= [[2] [2] [2] [2] [2] [2] [2] [2] [2] [2]]
+         (to-frame-scores [[1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1]]) ))
+  )
+
 #_(deftest score-test
   (testing "given10Missed_returnZero"
     (is (= 0 (score [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0]))))
