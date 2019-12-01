@@ -4,5 +4,5 @@
 
 (defn score
   [rolls]
-  0
+  (reduce + rolls)
   )
