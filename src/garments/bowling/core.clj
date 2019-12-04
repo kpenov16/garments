@@ -3,7 +3,17 @@
   )
 
 (defn group-frames [rolls]
-  (into [] (partition 2 rolls))
+  (loop [remaining rolls
+         frames []]
+    (if (empty? remaining)
+      frames
+      (if (= 10 (first remaining))
+          (recur (drop 1 remaining)
+                 (conj frames (take 1 remaining)))
+          (recur (drop 2 remaining)
+                 (conj frames (take 2 remaining)))
+          )
+      ))
   )
 
 (defn spare? [frame]
@@ -13,11 +23,16 @@
 (defn spare-extra-score [remaining-frames]
   (first (first remaining-frames)))
 
+(defn strike-extra-score [remaining-frames]
+  (reduce + (take 2 (flatten remaining-frames))))
+
 (defn next-frame-score [[frame & other]]
   (let [simple-score (reduce + frame)]
-    (if (spare? frame)
+     (if (= 10 (first frame))
+       (+ simple-score (strike-extra-score other))
+       (if (spare? frame)
       (+ simple-score (spare-extra-score other))
-      simple-score)))
+      simple-score)) ))
 
 
 (defn to-frame-scores [frames]
