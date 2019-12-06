@@ -89,6 +89,8 @@
     (is (= 30 (score [10 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]))))
   (testing "givenAllSpares_returnSumOfAllFrames+TheRollOfNextFrame"
     (is (= 150 (score [5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5]))))
+  (testing "givenAllStrike_return300"
+    (is (= 300 (score [10 10 10 10 10 10 10 10 10 10 10 10]))))
   )
 
 (run-tests 'garments.bowling.core-test)
