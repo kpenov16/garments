@@ -3,7 +3,10 @@
   )
 
 (defn next-frame-size [remaining-rolls]
-  (if (= 10 (first remaining-rolls)) 1 2))
+  (if (= 3 (count remaining-rolls))
+    3
+    (if (= 10 (first remaining-rolls)) 1 2))
+  )
 
 (defn group-frames [rolls]
   (loop [remaining rolls
@@ -29,8 +32,8 @@
      (if (= 10 (first frame))
        (+ simple-score (strike-extra-score other))
        (if (spare? frame)
-      (+ simple-score (spare-extra-score other))
-      simple-score)) ))
+           (+ simple-score (spare-extra-score other))
+            simple-score)) ))
 
 
 (defn to-frame-scores [frames]

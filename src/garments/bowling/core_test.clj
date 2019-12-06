@@ -2,6 +2,24 @@
   (:require [clojure.test :refer :all]
             [garments.bowling.core :refer :all]))
 
+(deftest next-frame-size-test
+  (testing "givenStrikeInNextFrame_returnSizeOfNextFrameToBeOne"
+    (is (= 1
+           (next-frame-size [10 3 1 1 1]))))
+  (testing "givenStrikeInNextFrame_returnSizeOfNextFrameToBeOne"
+    (is (= 2
+           (next-frame-size [1 1 1 1 1]))))
+  (testing "givenSpare_returnSizeOfNextFrameToBeTwo"
+    (is (= 2
+           (next-frame-size [1 9 1 1 1]))))
+  (testing "givenLastSpare_returnSizeOfNextFrameToBeTree"
+    (is (= 3
+           (next-frame-size [5 5 1]))))
+  (testing "givenLastStrike_returnSizeOfNextFrameToBeTree"
+    (is (= 3
+           (next-frame-size [10 1 1]))))
+  )
+
 (deftest group-frames-test
   (testing "givenRolls_returnRollsGroupedIntoFrames"
     (is (= [[1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1]]
@@ -9,6 +27,10 @@
   (testing "givenRollsWithStrike_returnRollsGroupedIntoFrames"
     (is (= [[10] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1]]
            (group-frames [10 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]) )))
+  #_(testing "givenSpareFrameWithBonusRoll_returnRollsGroupedIntoFrames"
+    (is (= [[1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [5 5 3]]
+           (group-frames [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 5 5 3]) )))
+
   )
 
 (deftest next-frame-score-test
@@ -65,6 +87,8 @@
     (is (= 29 (score [9 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]))))
   (testing "givenAStrike_returnSumOfAll+FirstTwoRollsAfterStrikeOnceAgain" ;;10+1+1+18
     (is (= 30 (score [10 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]))))
+  #_(testing "givenAllSpares_returnSumOfAllFrames+TheRollOfNextFrame"
+    (is (= 150 (score [5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5]))))
   )
 
 (run-tests 'garments.bowling.core-test)
