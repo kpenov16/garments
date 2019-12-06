@@ -27,7 +27,7 @@
   (testing "givenRollsWithStrike_returnRollsGroupedIntoFrames"
     (is (= [[10] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1]]
            (group-frames [10 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]) )))
-  #_(testing "givenSpareFrameWithBonusRoll_returnRollsGroupedIntoFrames"
+  (testing "givenSpareFrameWithBonusRoll_returnRollsGroupedIntoFrames"
     (is (= [[1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [1 1] [5 5 3]]
            (group-frames [1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 5 5 3]) )))
 
@@ -87,7 +87,7 @@
     (is (= 29 (score [9 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]))))
   (testing "givenAStrike_returnSumOfAll+FirstTwoRollsAfterStrikeOnceAgain" ;;10+1+1+18
     (is (= 30 (score [10 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]))))
-  #_(testing "givenAllSpares_returnSumOfAllFrames+TheRollOfNextFrame"
+  (testing "givenAllSpares_returnSumOfAllFrames+TheRollOfNextFrame"
     (is (= 150 (score [5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5 5]))))
   )
 
