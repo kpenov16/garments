@@ -2,9 +2,11 @@
   (:require [clj-http.client :as client]
             [cheshire.core :as shire]
             [clojure.string :as s]))
+(defn get-first-name [full-name]
+  (first (s/split full-name #" ")))
 
-(defn get-first-name [nm]
-  (first (s/split nm #" ")))
+(defn get-name [raw-js]
+  (get raw-js "nm"))
 
 (defn map-sort-by-value [m]
   (into (sorted-map-by #(compare (m %2) (m %1))) m))
@@ -21,7 +23,7 @@
   (cond
     (nil? js-str) nil
     (empty? (shire/parse-string js-str)) ()
-    :else "Edward")
+    :else (get-first-name (apply get-name (shire/parse-string js-str))))
   )
 
 ;(query-json)

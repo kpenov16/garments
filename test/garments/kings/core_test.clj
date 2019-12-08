@@ -2,9 +2,26 @@
   (:require [midje.sweet :refer :all]
             [garments.kings.core :as king]))
 
+(facts
+  (fact (king/get-name {"id"  1,
+                        "nm"  "Peter the Elder",
+                        "cty" "United Kingdom",
+                        "hse" "House of Wessex",
+                        "yrs" "899-925"})
+        => "Peter the Elder")
+  )
 
+(facts
+  (fact (king/get-first-name "Peter the Elder")
+        => "Peter"))
 
 (facts "givenKingdomsAsJsonStr_returnMostPopularKingName"
+       (fact "givenTwoKingdomAsJsonStr_returnMostPopularKingIsThisKingsName"
+             (king/most-popular-name "[\n {\n \"id\": 1,\n \"nm\": \"Peter the Elder\",\n \"cty\": \"United Kingdom\",\n  \"hse\": \"House of Wessex\",\n \"yrs\": \"899-925\"\n  },
+                                          {\n \"id\": 1,\n \"nm\": \"Edward the Elder\",\n \"cty\": \"United Kingdom\",\n  \"hse\": \"House of Wessex\",\n \"yrs\": \"899-925\"\n  }]")
+             => "Peter"
+             )
+
        (fact "givenOneKingdomAsJsonStr_returnMostPopularKingIsThisKingsName"
              (king/most-popular-name "[\n {\n \"id\": 1,\n \"nm\": \"Edward the Elder\",\n \"cty\": \"United Kingdom\",\n  \"hse\": \"House of Wessex\",\n \"yrs\": \"899-925\"\n  }]")
               => "Edward"
