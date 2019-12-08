@@ -17,10 +17,14 @@
 
 (facts "givenKingdomsAsJsonStr_returnMostPopularKingName"
        (fact "givenTwoKingdomAsJsonStr_returnMostPopularKingIsThisKingsName"
-             (king/most-popular-name "[\n {\n \"id\": 1,\n \"nm\": \"Peter the Elder\",\n \"cty\": \"United Kingdom\",\n  \"hse\": \"House of Wessex\",\n \"yrs\": \"899-925\"\n  },
+             (king/most-popular-name "[\n {\n \"id\": 1,\n \"nm\": \"Peter the Elder\",\n \"cty\": \"United Kingdom\",\n  \"hse\": \"House of Wessex\",\n \"yrs\": \"899-925\"\n  },\n
                                           {\n \"id\": 1,\n \"nm\": \"Edward the Elder\",\n \"cty\": \"United Kingdom\",\n  \"hse\": \"House of Wessex\",\n \"yrs\": \"899-925\"\n  }]")
-             => "Peter"
-             )
+             => "Peter")
+       (fact "givenThreeKingdomsAsJsonStr_returnMostPopularKingIsThisKingsName"
+             (king/most-popular-name "[\n {\n \"id\": 1,\n \"nm\": \"Peter the Elder\",\n \"cty\": \"United Kingdom\",\n  \"hse\": \"House of Wessex\",\n \"yrs\": \"899-925\"\n  },\n
+                                          {\n \"id\": 2,\n \"nm\": \"Edward the Elder\",\n \"cty\": \"United Kingdom\",\n  \"hse\": \"House of Wessex\",\n \"yrs\": \"899-925\"\n  },\n
+                                          {\n \"id\": 3,\n \"nm\": \"Edward I\",\n         \"cty\": \"United Kingdom\",\n  \"hse\": \"House of Wessex\",\n \"yrs\": \"899-925\"\n  }]")
+             => "Edward")
 
        (fact "givenOneKingdomAsJsonStr_returnMostPopularKingIsThisKingsName"
              (king/most-popular-name "[\n {\n \"id\": 1,\n \"nm\": \"Edward the Elder\",\n \"cty\": \"United Kingdom\",\n  \"hse\": \"House of Wessex\",\n \"yrs\": \"899-925\"\n  }]")

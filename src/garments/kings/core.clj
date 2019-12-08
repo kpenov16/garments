@@ -23,7 +23,8 @@
   (cond
     (nil? js-str) nil
     (empty? (shire/parse-string js-str)) ()
-    :else (get-first-name (apply get-name (shire/parse-string js-str))))
+    :else (first (first (map-sort-by-value (frequencies (map get-first-name (map get-name (shire/parse-string js-str)))))))
+    )
   )
 
 ;(query-json)
