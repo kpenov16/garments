@@ -18,7 +18,10 @@
                          ))))
 
 (defn most-popular-name [js-str]
-  "Edward"
+  (cond
+    (nil? js-str) nil
+    (empty? (shire/parse-string js-str)) ()
+    :else "Edward")
   )
 
 ;(query-json)

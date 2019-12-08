@@ -10,6 +10,9 @@
               => "Edward")
        (fact "givenNoKingdomsAsJsonStr_returnNil"
              (king/most-popular-name "[]")
+             => ())
+       (fact "givenNilAsJsonStr_returnNil"
+             (king/most-popular-name nil)
              => nil)
 #_       (fact "givenOneKingdomAsJsonStr_returnMostPopularKingIsThisKingsName"
       ( "[\n {\n \"id\": 1,\n \"nm\": \"Edward the Elder\",\n \"cty\": \"United Kingdom\",\n  \"hse\": \"House of Wessex\",\n \"yrs\": \"899-925\"\n  },\n
