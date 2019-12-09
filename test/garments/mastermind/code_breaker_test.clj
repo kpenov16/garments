@@ -7,5 +7,5 @@
   )
 
 (fact "Code breaker"
-      (facts "empty guess")
-  (break-code []) => [0 0 0 0])
+      (facts "givenScoreGuessWithNoMatches_returnEmptyVector")
+  (break-code [0 0 0 0]) => [1 1 1 1])
