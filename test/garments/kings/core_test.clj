@@ -8,8 +8,7 @@
                         "cty" "United Kingdom",
                         "hse" "House of Wessex",
                         "yrs" "899-925"})
-        => "Peter the Elder")
-  )
+        => "Peter the Elder"))
 
 (facts
   (fact (king/get-first-name "Peter the Elder")
@@ -40,9 +39,4 @@
        (fact "givenInvalidJsonAsStr_returnException"
              (king/most-popular-name "[")
              => (throws Exception))
-#_       (fact "givenOneKingdomAsJsonStr_returnMostPopularKingIsThisKingsName"
-      ( "[\n {\n \"id\": 1,\n \"nm\": \"Edward the Elder\",\n \"cty\": \"United Kingdom\",\n  \"hse\": \"House of Wessex\",\n \"yrs\": \"899-925\"\n  },\n
-             {\n \"id\": 2,\n \"nm\": \"Athelstan\",\n        \"cty\": \"United Kingdom\",\n  \"hse\": \"House of Wessex\",\n \"yrs\": \"925-940\"\n  }]")
-      ;(apply hash-map (first (king/query-json))) => {"Edward" 1}
-      )
        )
