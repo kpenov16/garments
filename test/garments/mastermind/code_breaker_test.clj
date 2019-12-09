@@ -2,10 +2,10 @@
   (:require [midje.sweet :refer :all]
            [garments.mastermind.code-breaker :refer :all]))
 
-(defn break-code [guesses]
-  [0 0 0 0]
+(defn break-code [code guess]
+  []
   )
 
 (fact "Code breaker"
       (facts "givenScoreGuessWithNoMatches_returnEmptyVector")
-  (break-code [0 0 0 0]) => [1 1 1 1])
+  (break-code [0 0 0 0] [1 1 1 1]) => [])
