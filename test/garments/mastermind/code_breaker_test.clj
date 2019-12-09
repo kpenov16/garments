@@ -3,9 +3,7 @@
            [garments.mastermind.code-breaker :refer :all]))
 
 (defn break-code [code guess]
-  (if (= (first code) (first guess))
-      [:pos]
-      [])
+  (filter #(if (not (nil? %)) %) (map #(if (= %1 %2) :pos) code guess))
   )
 
 (fact "Code breaker"
