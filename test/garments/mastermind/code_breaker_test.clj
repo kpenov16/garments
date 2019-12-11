@@ -5,18 +5,9 @@
 (defn position-matches [code guess]
   (count (filter identity (map #(= %1 %2) code guess))))
 
-
-(defn break-code [code guess]
-  [(reduce +
-           (map
-             #(if (= (first %) (second %)) 1 0)
-             (partition 2 (interleave code guess))))])
-
 (defn score [code guess]
-       [
-        (position-matches code guess)
-        0
-        ])
+  [(position-matches code guess)
+   0])
 
 (fact "Code breaker engine"
       (fact "givenScoreGuessWithNoMatches_returnEmptyVector"
