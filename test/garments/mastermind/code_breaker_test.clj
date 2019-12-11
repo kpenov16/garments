@@ -14,7 +14,7 @@
              (score [0 0 0 0] [1 1 1 1]) => [0 0])
       (fact "givenScoreOnePositionMatch_returnVectorWithMatchedPosition"
              (score [0 0 0 0] [0 1 1 1]) => [1 0])
-      (fact "givenScoreTwoPositionMatch_returnVectorWithTwoMatchedPositions"
+      (fact "givenScorePositionMatch_returnVectorWithMatchedPositionsAsACount"
             (score [0 0 0 0] [0 0 1 1]) => [2 0]
             (score [0 0 0 0] [0 1 1 0]) => [2 0]
             (score [0 0 0 0] [1 0 1 1]) => [1 0]
