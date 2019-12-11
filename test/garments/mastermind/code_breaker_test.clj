@@ -9,7 +9,7 @@
   [(position-matches code guess)
    0])
 
-(fact "Code breaker engine"
+(facts "guess position and value"
       (fact "givenScoreGuessWithNoMatches_returnEmptyVector"
              (score [0 0 0 0] [1 1 1 1]) => [0 0])
       (fact "givenScoreOnePositionMatch_returnVectorWithMatchedPosition"
@@ -22,4 +22,9 @@
             (score [1 2 3 4] [1 2 3 4]) => [4 0]
             )
 )
+
+(facts "guess only value but no position"
+       (fact "givenOneValueButWrongPosition_returnNoMatchAndOneValueGuessed"
+             (score [1 0 1 1] [0 2 2 2]) => [0 1])
+       )
 
