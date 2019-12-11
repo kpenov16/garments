@@ -17,6 +17,9 @@
       (fact "givenScoreTwoPositionMatch_returnVectorWithTwoMatchedPositions"
             (score [0 0 0 0] [0 0 1 1]) => [2 0]
             (score [0 0 0 0] [0 1 1 0]) => [2 0]
+            (score [0 0 0 0] [1 0 1 1]) => [1 0]
+            (score [1 2 3 0] [1 2 3 4]) => [3 0]
+            (score [1 2 3 4] [1 2 3 4]) => [4 0]
             )
 )
 
